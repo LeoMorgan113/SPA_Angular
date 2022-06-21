@@ -1,20 +1,30 @@
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script src="app.js"></script>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SPA Ang</title>
-</head>
+<html lang="en" ng-app="NameCalculator">
+    <head>
+        <meta charset="UTF-8">
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SPA Ang</title>
+    </head>
 <body>
-    <h1>Low Cohesion and Tight Cohesion</h1>
-    <div class="nameCalculator">
-        <div>
-            Your name: <input type="text" id="name">
+    <div>
+        <h1>Name calculator</h1>
+        <div ng-controller="NameCalculatorController" class="nameCalculator">
+            <div>
+                Your name:
+                <input type="text"
+                       ng-model="name"
+                       ng-keyup="countNumeric();"
+                >
+            </div>
+            <div>
+                The total numeric value of the person's name is: {{totalValue}}
+            </div>
         </div>
-        <div id="output"></div>
+
     </div>
 </body>
 </html>
