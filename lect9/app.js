@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('DIApp', [])
-        .controller('DIController', DIController)
+        .controller('DIController', ['$scope', '$filter', '$injector',DIController])
 
         function DIController($scope, $filter, $injector){
             $scope.name = 'Leo Morgan';
