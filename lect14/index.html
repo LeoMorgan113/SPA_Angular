@@ -10,15 +10,16 @@
     <title>Dependency Injection in JavaScript(and AngularJs)</title>
 </head>
 <body>
-<h1>Filters</h1>
-<div ng-controller="DIController">
-    <input type="text"
-           ng-model="name"
-           ng-blur="upper();"
-    >
-    <p>{{text}}: {{cost | currency : '$' : 2}}</p>
-    <p>{{saySomeText() | changeText : 'string' : 'message'}}</p>
-    <p>{{saySomeText() | changeText : 'string' : 'message' | uppercase}}</p>
-</div>
+    <h1>The Digest Cycle</h1>
+    <div ng-controller="CounterController">
+        <button ng-click="showNumberOfWatchers()">
+            Log # of Watchers
+        </button>
+        <div>
+            <button ng-click="countOnce()">
+                Up Once Counter(once)
+            </button>
+        </div>
+    </div>
 </body>
 </html>
