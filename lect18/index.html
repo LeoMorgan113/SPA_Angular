@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="DIApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dependency Injection in JavaScript(and AngularJs)</title>
+</head>
+<body>
+<h1>ng-repeat</h1>
+<div ng-controller="ShoppingListController">
+    <h3>Filter Array Example</h3>
+    <input type="text" ng-model="search">
+    <ul>
+        <li ng-repeat="item in shoppingList1 | filter : search">{{item}}</li>
+    </ul>
+</div>
+</body>
+</html>
