@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="DIApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dependency Injection in JavaScript(and AngularJs)</title>
+</head>
+<body>
+<h1>The Digest Cycle</h1>
+<div ng-controller="BindingController">
+    <button ng-click="showNumberOfWatchers()">
+        Log # of Watchers
+    </button>
+    <button ng-click="setFullName()">
+        Set Full Name
+    </button>
+    <div>
+        Full name is: {{ :: fullName}}
+        <br>
+
+        <button ng-click="logFirstName()">
+            Log Full Name
+        </button>
+        <button ng-click="logFullName()">
+            Log Full Name
+        </button>
+        <div>
+            <input type="text" ng-model="firstName">
+        </div>
+    </div>
+</div>
+</body>
+</html>
